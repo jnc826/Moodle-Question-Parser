@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <script src="script/jquery-1.11.0.min.js"></script>
+        <script src="script/wordhtml_to_moodlexml.js"></script>
+        
+    </head>
+    <body>
+        <div id="settings">
+            <p>Scoring method:
+                <input type="radio" name="percentcategory" value="strict" checked="checked">strict
+                <input type="radio" name="percentcategory" value="open">open
+            </p>
+        </div>
+        <div id="sourceChooser">
+            <form id="filechoose" method="get">
+                <input type="file" name="file" />
+                <input type="submit" name="read"/>
+            </form>
+        </div>
+        <div id="parseXML">
+            <textarea id="xmlCode" cols="80" rows="10"></textarea>
+        </div>
+        <div id="sourcefile"></div>
+        
+    </body>
+</html>

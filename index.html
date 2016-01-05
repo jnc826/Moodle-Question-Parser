@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moodle Test Parses v2.0 Beta</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/jquery-ui/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/wordhtml_to_moodlexml.css">
+        
+        <script src="script/jquery-1.11.0.min.js"></script>
+        <script src="script/jquery-ui.min.js"></script>
+        <script src = "script/FileSaver.min.js"></script>
+        
+        <script src="script/lang/hu.js"></script>
+        
+        <script src="script/lang/lang.js"></script>
+        <script src="script/wordhtml_to_moodlexml.js"></script>
+    </head>
+    <body>
+        <header></header>
+        <section id="parserblock">
+            <h3 id="fileblock"></h3>
+            <div>
+                <div id="sourceChooser">
+                    <input type="file" name="file" id="sourcefileinput" />
+                    <button type="button" id="filechoose">Küldés</button>                    
+                </div>
+                <div id="settings">
+                    <h4 id="settings_string"></h4>
+                    <div id="pointmethodbuttons">
+                        <label for="strictmode" id="strictmodelabel"></label>
+                        <input type="radio" name="percentcategory" id="strictmode" value="strict" checked="checked">
+                        <label for="openmode" id="openmodelabel"></label>
+                        <input type="radio" name="percentcategory" id="openmode" value="open">
+                    </div>
+                </div>
+            </div>
+                      
+            <h3 id="originalHTMLblock"></h3>
+            <div id="sourcefile"></div>
+            
+            <h3 id="parsedresult"></h3>
+            <div>
+                <div id="tabs">
+                    <ul>
+                      <li><a href="#MC-tab" id="MCtabhead"></a></li>
+                      <li><a href="#TF-tab" id="TFtabhead"></a></li>
+                      <li><a href="#CQ-tab" id="CQtabhead"></a></li>
+                      <li><a href="#SA-tab" id="SAtabhead"></a></li>
+                    </ul>
+                    <div id="MC-tab"></div>
+                    <div id="TF-tab"></div>
+                    <div id="CQ-tab"></div>
+                    <div id="SA-tab"></div>
+                </div>
+                <div>
+                    <button id="save_param"></button>
+                </div>
+            </div>
+            <h3 id="xml"></h3>
+            <div>
+               <textarea id="xmlCode" cols="80" rows="20"></textarea>
+               <button type="button" id="xmlsave">Mentés</button>  
+            </div>
+            
+        </section>
+        <footer></footer>
+        
+        <div id="dialog">
+            <p>Tartalom</p>
+        </div>
+    </body>
+</html>
