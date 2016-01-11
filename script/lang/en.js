@@ -10,14 +10,12 @@ var strings = {
     settings_string: "Settings",
     strictmodelabel: "Strict scoring",
     openmodelabel: "Open scoring",
+    allornothingmodelabel: "All or Nothing scoring", 
     save_param: "Save data",
     error: "Error",
     not100: "The point value of correct answers do not add up to 100% in the case of one or more multiple choice questions!",
     rightfeedback: "Right answer",
-    wrongfeedback: "Wrong answer", 
-    moodle1label: "Moodle 1.x", 
-    moodle2label: "Moodle 2.x"
-    
+    wrongfeedback: "Wrong answer",   
     
 };
 

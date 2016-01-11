@@ -9,10 +9,10 @@ $(document).ready(function() {
     $("#SAtabhead").html(strings.SAtabhead);
     $("#settings_string").html(strings.settings_string);
     $("#strictmodelabel").html(strings.strictmodelabel);
+    $("#allornothingmodelabel").html(strings.allornothingmodelabel);
     $("#openmodelabel").html(strings.openmodelabel);
     $("#save_param").html(strings.save_param);
-    $("#moodle2modelabel").html(strings.moodle2label);
-    $("#moodle1modelabel").html(strings.moodle1label);
+
 });
 
 

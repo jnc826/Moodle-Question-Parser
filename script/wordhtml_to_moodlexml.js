@@ -199,6 +199,8 @@ $(document).ready(function() {
     function getMCCollection(){
         var scoringMethod = $( "#pointmethodbuttons :radio:checked" ).attr('value'); //pontozási metódus
         
+        console.log(scoringMethod);
+        
         var listMC = new Array(); //MC kérdések tömbjének létrehozása
         
         var $mcTestQs = $("#sourcefile .Feleletvlasztskrds"); //MC kérések lekérdezése, 
@@ -208,7 +210,8 @@ $(document).ready(function() {
             questionText = questionText.replace(/&nbsp;/g, ''); //felesleges bekezdéstörések kiszedése a kérdsés szövegéből
 
             var question = {};  //Kérdés objektum létrehozása
-            question.type = "multichoice";
+            question.type = (scoringMethod == "allornothing") ? "multichoiceset" :"multichoice";
+            //question.type = "multichoice";
             question.name = "("+i+") "+questionText.substring(0,180); //kérdés neve = szövegével
             question.text = questionText; //kérdés szövege
             question.wrongAnswers = []; //rossz válaszok tömbje
@@ -268,7 +271,7 @@ $(document).ready(function() {
                     rPercent = 100/rightAnswerNumber;
             }
             for(i = 0; i < question.rightAnswers.length; i++) {
-                question.rightAnswers[i].percent = rPercent;
+                question.rightAnswers[i].percent = (scoringMethod == "allornothing") ? 100 : rPercent;
             }
 
             //Helytelen válaszok kérdéspontok igazítása a lenyíló listákhoz. (Csak 10 darab válaszig oké)
