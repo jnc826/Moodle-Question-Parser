@@ -276,7 +276,7 @@ $(document).ready(function() {
 
             //Helytelen válaszok kérdéspontok igazítása a lenyíló listákhoz. (Csak 10 darab válaszig oké)
             var wPercent = 0;
-            if (scoringMethod == "strict") {
+            if (scoringMethod == "strict" && question.rightAnswers.length > 1) {
                 switch (Math.floor(wrongAnswerNumber)) {
                     case 3:
                         wPercent = -33.333;
